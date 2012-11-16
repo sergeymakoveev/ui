@@ -141,14 +141,17 @@ input.momail[type='text']{
     background-color:rgba(0,0,0,0);
 }
 .momail.combobox > .menu {
-    position:absolute;
-    display:none;
-    padding: 0;
-    margin: 3px 0 0 0;
+    background-color:#fff;
     border-radius: 0 5px 5px 5px;
     box-shadow: 0 0 3px rgba(0,0,0,0.8);
+    color:inherit;
+    display:none;
+    margin: 3px 0 0 0;
     outline:none;
-    background-color:#fff;
+    padding: 0;
+    position:absolute;
+    text-decoration: none;
+
 }
 .momail.combobox > .arrow:focus
           ~ .menu,
