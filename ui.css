@@ -108,7 +108,7 @@ input.momail[type='text']{
 
 /* -------------------------------------------------------------------------- */
 
-.momail.combobox > .button {
+.momail.combobox > [name='button'] {
     border:0 none;
     display:inline-block;
     height:16px;
