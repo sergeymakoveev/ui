@@ -9,7 +9,7 @@
 }
 .momail.ui.label{
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: text-bottom;
 }
 
 .momail.button{
@@ -103,7 +103,7 @@ input.momail[type='text']{
     border: 1px solid #C2C2C2;
     display: inline-block;
     height: 23px;
-    vertical-align: middle;
+    vertical-align: text-bottom;
 }
 
 /* -------------------------------------------------------------------------- */
