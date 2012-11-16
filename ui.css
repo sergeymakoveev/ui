@@ -17,13 +17,16 @@
     /* background-image:     -ms-linear-gradient(#f3f3f3, #d8d8d8);                /* TODO:отладить градиенты в IE */
     background-image:      -o-linear-gradient(#f3f3f3, #d8d8d8);
     background-image:         linear-gradient(#f3f3f3, #d8d8d8);
-    display: inline-block;
-    border-radius: 0.4em/1em;
     border: 1px solid #C2C2C2;
-    min-height: 17px;
-    min-width: 17px;
-    vertical-align: middle;
+    border-radius: 0.4em/1em;
     cursor: default;
+    display: inline-block;
+    font-size: 12px;
+    height: 16px;
+    line-height:12px;
+    min-width: 16px;
+    margin:0;
+    vertical-align: text-bottom;
 }
 .momail.button:hover:not(:active){
     background-image: -webkit-linear-gradient(#fff, #e8e8e8);
@@ -37,60 +40,61 @@
 .momail.button.s22x22{
     padding: 2px;
 }
+.momail.button.s26x26{
+    padding: 4px;
+}
 .momail.button.icon.text{
     padding-right: 4px;
 }
 .momail.button.icon.text::before{
-    margin-left: 2px;
-    margin-right: 4px;
+    margin: 0 2px;
 }
-.momail.button.icon[name]::before{
-    content:"";
+.momail.icon[name]::before{
     background-image: url(icons.png);
     background-position: 0 0;
     background-repeat: no-repeat;
+    content:"";
     display: inline-block;
-    width: 16px;
     height: 16px;
-    vertical-align: middle;
-    margin: 1px;
+    vertical-align: text-top;
+    width: 16px;
 }
-.momail.button.icon[name='mail']::before,
-.momail.button.icon[name='mail-new']::before,
-.momail.button.icon[name='mail-compose']::before {
-    background-position: 0 -4px;
+.momail.icon[name='mail']::before,
+.momail.icon[name='mail-new']::before,
+.momail.icon[name='mail-compose']::before {
+    background-position: 0 -3px;
 }
-.momail.button.icon[name='contact']::before{
+.momail.icon[name='contact']::before{
     background-position: -171px 0;
 }
-.momail.button.icon[name='contact-new']::before,
-.momail.button.icon[name='contact-add']::before{
+.momail.icon[name='contact-new']::before,
+.momail.icon[name='contact-add']::before{
     background-position: -187px 0;
 }
-.momail.button.icon[name='home']::before,
-.momail.button.icon[name='last']::before {
+.momail.icon[name='home']::before,
+.momail.icon[name='last']::before {
     background-position: -102px -102px;
 }
-.momail.button.icon[name='end']::before,
-.momail.button.icon[name='first']::before{
+.momail.icon[name='end']::before,
+.momail.icon[name='first']::before{
     background-position: -119px -102px;
 }
-.momail.button.icon[name='next']::before{
+.momail.icon[name='next']::before{
     background-position: -51px -102px;
 }
-.momail.button.icon[name='prev']::before{
+.momail.icon[name='prev']::before{
     background-position: -34px -102px;
 }
-.momail.button.icon[name='trash']::before{
+.momail.icon[name='trash']::before{
     background-position: -52px 0;
 }
-.momail.button.icon[name='refresh']::before{
+.momail.icon[name='refresh']::before{
     background-position: -120px -69px;
 }
-.momail.button.icon[name='trash-empty']::before{
+.momail.icon[name='trash-empty']::before{
     background-position: -85px 0;
 }
-.momail.button.icon[name='search']::before{
+.momail.icon[name='search']::before{
     background-position: -68px -136px;
 }
 
@@ -105,28 +109,30 @@ input.momail[type='text']{
 /* -------------------------------------------------------------------------- */
 
 .momail.combobox > .button {
+    border:0 none;
     display:inline-block;
-    margin: 1px 5px;
-    vertical-align: middle;
     height:16px;
     line-height:16px;
-    outline:none;
-    border:none;
+    margin: 0 0 0 5px;
+    outline:0 none;
     padding:0;
+    vertical-align: middle;
     
 }
 .momail.combobox > .arrow {
-    content:'';
-    display:inline-block;
-    height: 16px;
-    width: 16px;
-    font-size: 0;
-    border-left:1px solid #ccc;
     background-image: url(icons.png);
     background-position: 0 -102px;
     background-repeat: no-repeat;
+    border-left:1px solid #ccc;
+    content:'';
+    display:inline-block;
+    height: 16px;
+    font-size: 0;
+    margin: 0 1px 0 0;
+    outline:0 none;
+    padding:0;
     vertical-align: middle;
-    outline:none;
+    width: 16px;
 }
 .momail.combobox > .arrow:hover {
     background-color:rgba(0,0,0,0.3);
