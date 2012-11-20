@@ -2,9 +2,12 @@
 <html>
     <head>
         <title>ui</title>
-        <link href="ui.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="Mo.Mail.Ui.css" media="screen" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-        <script type="text/javascript" src="ui.js"></script>
+        <script type="text/javascript" src="Mo.Mail.js"></script>
+        <script type="text/javascript" src="Mo.Mail.jQuery.js"></script>
+        <script type="text/javascript" src="Mo.Mail.Obj.js"></script>
+        <script type="text/javascript" src="Mo.Mail.Ui.js"></script>
     </head>
     <body>
     <h1>Buttons 18x18:</h1>
@@ -18,10 +21,10 @@
     <i title="Next"     name="next"  class="momail ui button icon text">Next</i>
     <i title="End"      name="end" class="momail ui button icon"></i>
     <i title="End"      name="end" class="momail ui button icon text">End</i>
-    <div class="momail ui combobox button text" name="combobox">
+    <div class="momail ui combobox button text">
         <div name="button">text</div>
         <a class='arrow' tabindex='1' />
-        <a name=menu tabindex='1' onmouseup='this.blur()'>
+        <a name='menu' tabindex='1' onmouseup='this.blur()'>
             <span onclick='console.log(this)'>Buy on iTunes</span>
             <span>Buy on Amazon</span>
             <span>Buy on CD Baby</span>
@@ -31,10 +34,10 @@
             <span>View on PeterSchoffelen.nl</span>
         </a>
     </div>
-    <div class="momail ui combobox button text" name="combobox">
+    <div class="momail ui combobox button text">
         <input name='button' type="checkbox" />
         <a class='arrow' tabindex='1' />
-        <a name=menu tabindex='1' onmouseup='this.blur()'>
+        <a name='menu' tabindex='1' onmouseup='this.blur()'>
             <span onclick='console.log(this)'>Buy on iTunes</span>
             <span>Buy on Amazon</span>
             <span>Buy on CD Baby</span>
@@ -50,10 +53,10 @@
     <i title="Empty trash" name="trash-empty" class="momail ui button icon s22x22"></i>
     <i title="Refresh"     name="refresh"     class="momail ui button icon s22x22"></i>
     <i title="Next"     name="next"  class="momail ui button icon text s22x22">Next</i>
-    <div class="momail ui combobox button text s22x22" name="combobox">
+    <div class="momail ui combobox button text s22x22">
         <div name="button">text</div>
         <a class='arrow' tabindex='1' />
-        <a name=menu tabindex='1' onmouseup='this.blur()'>
+        <a name='menu' tabindex='1' onmouseup='this.blur()'>
             <span onclick='console.log(this)'>Buy on iTunes</span>
             <span>Buy on Amazon</span>
             <span>Buy on CD Baby</span>
@@ -63,10 +66,10 @@
             <span>View on PeterSchoffelen.nl</span>
         </a>
     </div>
-    <div class="momail ui combobox button text s22x22" name="combobox">
+    <div class="momail ui combobox button text s22x22">
         <input name='button' type="checkbox" />
         <a class='arrow' tabindex='1' />
-        <a name=menu tabindex='1' onmouseup='this.blur()'>
+        <a name='menu' tabindex='1' onmouseup='this.blur()'>
             <span onclick='console.log(this)'>Buy on iTunes</span>
             <span>Buy on Amazon</span>
             <span>Buy on CD Baby</span>
@@ -81,10 +84,10 @@
     <i title="Trash"       name="trash"       class="momail ui button icon s26x26"></i>
     <i title="Empty trash" name="trash-empty" class="momail ui button icon s26x26"></i>
     <i title="Refresh"     name="refresh"     class="momail ui button icon s26x26"></i>
-    <div class="momail ui combobox button text s26x26" name="combobox">
+    <div class="momail ui combobox button text s26x26">
         <div name="button">text</div>
         <a class='arrow' tabindex='1' />
-        <a name=menu tabindex='1' onmouseup='this.blur()'>
+        <a name='menu' tabindex='1' onmouseup='this.blur()'>
             <span onclick='console.log(this)'>Buy on iTunes</span>
             <span>Buy on Amazon</span>
             <span>Buy on CD Baby</span>
@@ -94,10 +97,10 @@
             <span>View on PeterSchoffelen.nl</span>
         </a>
     </div>
-    <div class="momail ui combobox button text s26x26" name="combobox">
-        <input name='button' type="checkbox" />
+    <div class="momail ui combobox button text s26x26">
+        <div name="button">text</div>
         <a class='arrow' tabindex='1' />
-        <a name=menu tabindex='1' onmouseup='this.blur()'>
+        <a class='top' name='menu' tabindex='1' onmouseup='this.blur()'>
             <span onclick='console.log(this)'>Buy on iTunes</span>
             <span>Buy on Amazon</span>
             <span>Buy on CD Baby</span>
@@ -106,6 +109,30 @@
             <span>View on Last.fm</span>
             <span>View on PeterSchoffelen.nl</span>
         </a>
+    </div>
+    <div class="momail ui combobox button text s26x26">
+        <input name='button' type="checkbox" />
+        <a class='arrow' tabindex='1' />
+        <a name='menu' tabindex='1' onmouseup='this.blur()'>
+            <span onclick='console.log(this)'>Buy on iTunes</span>
+            <span>Buy on Amazon</span>
+            <span>Buy on CD Baby</span>
+            <span>Listen via Spotify</span>
+            <span>View on YouTube</span>
+            <span>View on Last.fm</span>
+            <span>View on PeterSchoffelen.nl</span>
+        </a>
+    </div>
+    <hr />
+    <div class="momail ui combobox button text s26x26" name="combocheckbox">
+        <input name='button' type="checkbox" />
+        <a class='arrow' tabindex='1' />
+        <a name='menu' tabindex='1'></a>
+    </div>
+    <div class="momail ui combobox button text s26x26" name="combobox">
+        <div name="button"></div>
+        <a class='arrow' tabindex='1' />
+        <a name='menu' tabindex='1'></a>
     </div>
     </body>
 </html>

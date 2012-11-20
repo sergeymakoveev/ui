@@ -117,7 +117,7 @@ input.momail[type='text']{
     outline:0 none;
     padding:0;
     vertical-align: middle;
-    
+
 }
 .momail.combobox > .arrow {
     background-image: url(icons.png);
@@ -151,7 +151,7 @@ input.momail[type='text']{
     padding: 0;
     position:absolute;
     text-decoration: none;
-
+    z-index: 1;
 }
 .momail.combobox > .arrow:focus
                  ~ [name='menu'],
@@ -163,6 +163,7 @@ input.momail[type='text']{
     display:block;
     padding:2px 5px;
     cursor:default;
+    text-align:left;
 }
 .momail.combobox > [name='menu'] > span:hover {
     background-color:rgba(0,0,0,0.3);
@@ -176,4 +177,17 @@ input.momail[type='text']{
 }
 .momail.combobox > [name='menu'] > span:last-child {
     border-radius: 0 0 5px 5px;
+}
+
+.momail.combobox > [name='menu'].top {
+    position:relative;
+    bottom:2em;
+    margin-top:-100%;
+    border-radius: 5px 5px 5px 0;
+}
+.momail.combobox > [name='menu'].top > span:first-child {
+    border-radius: 5px 5px 0 0;
+}
+.momail.combobox > [name='menu'].top > span:last-child {
+    border-radius: 0 0 5px 0;
 }
