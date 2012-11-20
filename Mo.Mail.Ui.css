@@ -144,7 +144,7 @@ input.momail[type='text']{
 .momail.combobox > .arrow:active {
     background-color:rgba(0,0,0,0);
 }
-.momail.combobox > [name='menu'] {
+.momail.combobox > .wrapper {
     color:inherit;
     cursor:pointer;
     display:none;
@@ -157,22 +157,23 @@ input.momail[type='text']{
     z-index: 1;
 }
 .momail.combobox > .arrow:focus
-                 ~ [name='menu'],
-.momail.combobox > [name='menu']:active,
-.momail.combobox > [name='menu']:focus {
+                 ~ .wrapper,
+.momail.combobox > .wrapper:active,
+.momail.combobox > .wrapper:focus {
     display: block;
 }
-.momail.combobox > [name='menu'] > .wrapper {
+.momail.combobox > .wrapper > [name='menu'] {
     background-color:#fff;
     border-radius: 0 5px 5px 5px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.8);
     color:inherit;
+    display:inline-block;
     margin: 3px 0 0 0;
     outline:none;
     padding: 0;
     position:relative;
 }
-.momail.combobox > [name='menu'] > .wrapper > span {
+.momail.combobox > .wrapper > [name='menu'] > span {
     display:block;
     padding:4px 8px;
     text-align:left;
@@ -180,49 +181,49 @@ input.momail[type='text']{
 .momail.combobox.s26x26 > [name="menu"] > .wrapper > span {
     padding: 8px 16px;
 }
-.momail.combobox > [name='menu'] > .wrapper > span.selected,
-.momail.combobox > [name='menu'] > .wrapper > span.selected:hover {
+.momail.combobox > .wrapper > [name='menu'] > span.selected,
+.momail.combobox > .wrapper > [name='menu'] > span.selected:hover {
     background-color:rgba(0,0,0,0.8);
     color: #fff;
 }
-.momail.combobox > [name='menu'] > .wrapper > span:hover {
+.momail.combobox > .wrapper > [name='menu'] > span:hover {
     background-color:rgba(0,0,0,0.3);
 }
-.momail.combobox > [name='menu'] > .wrapper > span:active {
+.momail.combobox > .wrapper > [name='menu'] > span:active {
     background-color:rgba(0,0,0,0.8);
     color:#fff;
 }
-.momail.combobox > [name='menu'] > .wrapper > span:first-child {
+.momail.combobox > .wrapper > [name='menu'] > span:first-child {
     border-radius: 0 5px 0 0;
 }
-.momail.combobox > [name='menu'] > .wrapper > span:last-child {
+.momail.combobox > .wrapper > [name='menu'] > span:last-child {
     border-radius: 0 0 5px 5px;
 }
 
-.momail.combobox.dropup > [name='menu'] {
+.momail.combobox.dropup > .wrapper > [name='menu'] {
     border-radius: 5px 5px 5px 0;
     box-shadow: 0 -1px 3px rgba(0,0,0,0.8);
 }
-.momail.combobox.dropup > [name='menu'] > span:first-child {
+.momail.combobox.dropup > .wrapper > [name='menu'] > span:first-child {
     border-radius: 5px 5px 0 0;
 }
-.momail.combobox.dropup > [name='menu'] > span:last-child {
+.momail.combobox.dropup > .wrapper > [name='menu'] > span:last-child {
     border-radius: 0 0 5px 0;
 }
 
-.momail.combobox.drop-left > [name='menu'] {
+.momail.combobox.drop-left > .wrapper {
 }
 .momail.combobox.drop-left > .arrow:focus
-                           ~ [name='menu'],
-.momail.combobox.drop-left > [name='menu']:active,
-.momail.combobox.drop-left > [name='menu']:focus {
+                           ~ .wrapper,
+.momail.combobox.drop-left > .wrapper:active,
+.momail.combobox.drop-left > .wrapper:focus {
     display:inline-block;
 }
-.momail.combobox.drop-left > [name='menu'] > .wrapper {
+.momail.combobox.drop-left > .wrapper > [name='menu'] {
     border-radius: 5px 0 5px 5px;
     margin-top: 1.5em;
     right: 100%;
 }
-.momail.combobox.drop-left > [name='menu'] > .wrapper > span:first-child {
+.momail.combobox.drop-left > .wrapper > [name='menu'] > span:first-child {
     border-radius: 5px 0 0 0;
 }
