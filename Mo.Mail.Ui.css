@@ -1,6 +1,10 @@
 .momail.ui {
     font: 12px Verdana,Lucida,Helvetica,Arial,sans-serif;
 }
+.momail.ui + .momail.ui {
+    margin-left: 4px;
+}
+
 .momail.disabled .momail.ui,
                  .momail.ui.disabled
 {
@@ -19,7 +23,7 @@
     background-image:         linear-gradient(#f3f3f3, #d8d8d8);
     border: 1px solid #C2C2C2;
     border-radius: 0.4em/1em;
-    cursor: default;
+    cursor: pointer;
     display: inline-block;
     font-size: 12px;
     height: 16px;
@@ -143,7 +147,7 @@ input.momail[type='text']{
 .momail.combobox > [name='menu'] {
     background-color:#fff;
     border-radius: 0 5px 5px 5px;
-    box-shadow: 0 0 3px rgba(0,0,0,0.8);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.8);
     color:inherit;
     display:none;
     margin: 3px 0 0 0;
@@ -152,6 +156,7 @@ input.momail[type='text']{
     position:absolute;
     text-decoration: none;
     z-index: 1;
+    cursor:pointer;
 }
 .momail.combobox > .arrow:focus
                  ~ [name='menu'],
@@ -161,9 +166,16 @@ input.momail[type='text']{
 }
 .momail.combobox > [name='menu'] > span {
     display:block;
-    padding:2px 5px;
-    cursor:default;
+    padding:4px 8px;
     text-align:left;
+}
+.momail.combobox.s26x26 > [name="menu"] > span {
+    padding: 8px 16px;
+}
+.momail.combobox > [name='menu'] > span.selected,
+.momail.combobox > [name='menu'] > span.selected:hover {
+    background-color:rgba(0,0,0,0.8);
+    color: #fff;
 }
 .momail.combobox > [name='menu'] > span:hover {
     background-color:rgba(0,0,0,0.3);
@@ -179,15 +191,13 @@ input.momail[type='text']{
     border-radius: 0 0 5px 5px;
 }
 
-.momail.combobox > [name='menu'].top {
-    position:relative;
-    bottom:2em;
-    margin-top:-100%;
+.momail.combobox.dropup > [name='menu'] {
     border-radius: 5px 5px 5px 0;
+    box-shadow: 0 -1px 3px rgba(0,0,0,0.8);
 }
-.momail.combobox > [name='menu'].top > span:first-child {
+.momail.combobox.dropup > [name='menu'] > span:first-child {
     border-radius: 5px 5px 0 0;
 }
-.momail.combobox > [name='menu'].top > span:last-child {
+.momail.combobox.dropup > [name='menu'] > span:last-child {
     border-radius: 0 0 5px 0;
 }

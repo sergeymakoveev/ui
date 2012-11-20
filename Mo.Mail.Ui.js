@@ -133,6 +133,7 @@
 
         this._init = function(args){
             This.get_('button')
+                .attr({checked:false})
                 .click(args.button);
             This.get_('menu')
                 .mouseup(function(){this.blur();})
@@ -161,24 +162,36 @@
         var This=this;
 
         this._init = function(args){
+            var selected = This.val_()||
+                           This.val_(Object.keys(args.menu||{})
+                                           .shift())
+                               .val_();
             This.get_('button')
-                .text( Object.keys(args.menu||{})
-                             .shift() )
-                .click(function(){args.menu[$(this).text()]();});
+                .click(function(){ args.menu[$(this).text()](); });
             This.get_('menu')
                 .mouseup(function(){this.blur();})
                 .append( $().add( Object.keys(args.menu||{})
                                         .map(function(name){
                                                 return $('<span/>').text(name)
-                                                                   .click(function(){ args.menu[name](); 
-                                                                                      This.get_('button')
+                                                                   .toggleClass('selected', name==selected)
+                                                                   .click(function(){ This.get_('button')
                                                                                           .text(name);
-                                                                                    })
+                                                                                      $(this).addClass('selected')
+                                                                                             .siblings()
+                                                                                                 .removeClass('selected');
+                                                                                      args.menu[name](); })
                                                                    .get(0);  }) ));
+        };
+
+        // Interface
+        this.val_ = function(val){
+            val = arguments.length ? This.get_('button').text(val):
+                                     This.get_('button').text();
+            return arguments.length ? This : val;
         };
 
         this._init.apply(this, [].slice.call(arguments).slice(1));
 
     };
-    
+
 })(jQuery);
