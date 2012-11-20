@@ -145,18 +145,16 @@ input.momail[type='text']{
     background-color:rgba(0,0,0,0);
 }
 .momail.combobox > [name='menu'] {
-    background-color:#fff;
-    border-radius: 0 5px 5px 5px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.8);
     color:inherit;
+    cursor:pointer;
     display:none;
-    margin: 3px 0 0 0;
+    height: 0;
+    margin:0;
     outline:none;
-    padding: 0;
+    padding:0;
     position:absolute;
     text-decoration: none;
     z-index: 1;
-    cursor:pointer;
 }
 .momail.combobox > .arrow:focus
                  ~ [name='menu'],
@@ -164,30 +162,40 @@ input.momail[type='text']{
 .momail.combobox > [name='menu']:focus {
     display: block;
 }
-.momail.combobox > [name='menu'] > span {
+.momail.combobox > [name='menu'] > .wrapper {
+    background-color:#fff;
+    border-radius: 0 5px 5px 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    color:inherit;
+    margin: 3px 0 0 0;
+    outline:none;
+    padding: 0;
+    position:relative;
+}
+.momail.combobox > [name='menu'] > .wrapper > span {
     display:block;
     padding:4px 8px;
     text-align:left;
 }
-.momail.combobox.s26x26 > [name="menu"] > span {
+.momail.combobox.s26x26 > [name="menu"] > .wrapper > span {
     padding: 8px 16px;
 }
-.momail.combobox > [name='menu'] > span.selected,
-.momail.combobox > [name='menu'] > span.selected:hover {
+.momail.combobox > [name='menu'] > .wrapper > span.selected,
+.momail.combobox > [name='menu'] > .wrapper > span.selected:hover {
     background-color:rgba(0,0,0,0.8);
     color: #fff;
 }
-.momail.combobox > [name='menu'] > span:hover {
+.momail.combobox > [name='menu'] > .wrapper > span:hover {
     background-color:rgba(0,0,0,0.3);
 }
-.momail.combobox > [name='menu'] > span:active {
+.momail.combobox > [name='menu'] > .wrapper > span:active {
     background-color:rgba(0,0,0,0.8);
     color:#fff;
 }
-.momail.combobox > [name='menu'] > span:first-child {
+.momail.combobox > [name='menu'] > .wrapper > span:first-child {
     border-radius: 0 5px 0 0;
 }
-.momail.combobox > [name='menu'] > span:last-child {
+.momail.combobox > [name='menu'] > .wrapper > span:last-child {
     border-radius: 0 0 5px 5px;
 }
 
@@ -200,4 +208,21 @@ input.momail[type='text']{
 }
 .momail.combobox.dropup > [name='menu'] > span:last-child {
     border-radius: 0 0 5px 0;
+}
+
+.momail.combobox.drop-left > [name='menu'] {
+}
+.momail.combobox.drop-left > .arrow:focus
+                           ~ [name='menu'],
+.momail.combobox.drop-left > [name='menu']:active,
+.momail.combobox.drop-left > [name='menu']:focus {
+    display:inline-block;
+}
+.momail.combobox.drop-left > [name='menu'] > .wrapper {
+    border-radius: 5px 0 5px 5px;
+    margin-top: 1.5em;
+    right: 100%;
+}
+.momail.combobox.drop-left > [name='menu'] > .wrapper > span:first-child {
+    border-radius: 5px 0 0 0;
 }
