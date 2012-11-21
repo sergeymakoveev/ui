@@ -123,11 +123,36 @@
      * @class
      * @constructor
      * @param {Object} Parent
+     * @returns {Mo.Mail.Ui.Combo}
+     */
+    Mo.Mail.Ui.Combo = function(Parent){
+
+        Mo.Mail.Ui.El.apply(this, arguments);
+
+        var This=this;
+
+        this._init = function(args){
+            This.get_('menu')
+                .mouseup(function(){this.blur();})
+            This.get_('arrow')
+                .mousedown(function(e){ if($(e.target).is(':focus'))
+                                           window.setTimeout(function(){ e.target.blur(); }, 0); });
+        };
+
+        this._init.apply(this, [].slice.call(arguments).slice(1));
+
+    };
+
+    /**
+     * @extends Mo.Mail.Ui.Combo
+     * @class
+     * @constructor
+     * @param {Object} Parent
      * @returns {Mo.Mail.Ui.ComboBox}
      */
     Mo.Mail.Ui.ComboCheckBox = function(Parent){
 
-        Mo.Mail.Ui.El.apply(this, arguments);
+        Mo.Mail.Ui.Combo.apply(this, arguments);
 
         var This=this, Super={};
 
@@ -136,7 +161,6 @@
                 .attr({checked:false})
                 .click(args.button);
             This.get_('menu')
-                .mouseup(function(){this.blur();})
                 .append( $().add( Object.keys(args.menu||{})
                                         .map(function(name){
                                                 return $('<span/>').text(name)
@@ -157,7 +181,7 @@
      */
     Mo.Mail.Ui.ComboBox = function(Parent){
 
-        Mo.Mail.Ui.El.apply(this, arguments);
+        Mo.Mail.Ui.Combo.apply(this, arguments);
 
         var This=this;
 
@@ -169,7 +193,6 @@
             This.get_('button')
                 .click(function(){ args.menu[$(this).text()](); });
             This.get_('menu')
-                .mouseup(function(){this.blur();})
                 .append( $().add( Object.keys(args.menu||{})
                                         .map(function(name){
                                                 return $('<span/>').text(name)

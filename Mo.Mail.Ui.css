@@ -1,10 +1,18 @@
+hr {
+    border: 0;
+    height: 1px;
+    background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, transparent), color-stop(50%, rgba(0, 0, 0, 0.5)), color-stop(100%, transparent));
+    background: -webkit-linear-gradient(left, transparent,rgba(0, 0, 0, 0.5),transparent);
+    background:    -moz-linear-gradient(left, transparent,rgba(0, 0, 0, 0.5),transparent);
+    background:      -o-linear-gradient(left, transparent,rgba(0, 0, 0, 0.5),transparent);
+    background:         linear-gradient(left, transparent,rgba(0, 0, 0, 0.5),transparent);
+}
 .momail.ui {
     font: 12px Verdana,Lucida,Helvetica,Arial,sans-serif;
 }
 .momail.ui + .momail.ui {
     margin-left: 4px;
 }
-
 .momail.disabled .momail.ui,
                  .momail.ui.disabled
 {
@@ -123,7 +131,7 @@ input.momail[type='text']{
     vertical-align: middle;
 
 }
-.momail.combobox > .arrow {
+.momail.combobox > [name='arrow'] {
     background-image: url(icons.png);
     background-position: 0 -102px;
     background-repeat: no-repeat;
@@ -138,10 +146,10 @@ input.momail[type='text']{
     vertical-align: middle;
     width: 16px;
 }
-.momail.combobox > .arrow:hover {
+.momail.combobox > [name='arrow']:hover {
     background-color:rgba(0,0,0,0.3);
 }
-.momail.combobox > .arrow:active {
+.momail.combobox > [name='arrow']:active {
     background-color:rgba(0,0,0,0);
 }
 .momail.combobox > .wrapper {
@@ -156,7 +164,7 @@ input.momail[type='text']{
     text-decoration: none;
     z-index: 1;
 }
-.momail.combobox > .arrow:focus
+.momail.combobox > [name='arrow']:focus
                  ~ .wrapper,
 .momail.combobox > .wrapper:active,
 .momail.combobox > .wrapper:focus {
@@ -213,7 +221,7 @@ input.momail[type='text']{
 
 .momail.combobox.drop-left > .wrapper {
 }
-.momail.combobox.drop-left > .arrow:focus
+.momail.combobox.drop-left > [name='arrow']:focus
                            ~ .wrapper,
 .momail.combobox.drop-left > .wrapper:active,
 .momail.combobox.drop-left > .wrapper:focus {
