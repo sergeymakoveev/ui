@@ -17,10 +17,10 @@
 
 .momail.button{
     background-image: -webkit-linear-gradient(#f3f3f3, #d8d8d8);
-    background-image:     -ms-linear-gradient(top,     #f3f3f3 0%, #d8d8d8 100%);
+    background-image:     -ms-linear-gradient(top, #f3f3f3 0%, #d8d8d8 100%);
     background-image:      -o-linear-gradient(#f3f3f3, #d8d8d8);
     background-image:         linear-gradient(#f3f3f3, #d8d8d8);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#f3f3f3',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#f3f3f3', GradientType=0 );
     border: 1px solid #C2C2C2;
     border-radius: 0.4em/1em;
     cursor: pointer;
