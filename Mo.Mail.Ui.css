@@ -94,7 +94,7 @@
 .momail.icon[name='refresh']::before{
     background-position: -120px -69px;
 }
-.momail.icon[name='trash-empty']::before{
+.momail.icon[name='trash_empty']::before{
     background-position: -85px 0;
 }
 .momail.icon[name='search']::before{
