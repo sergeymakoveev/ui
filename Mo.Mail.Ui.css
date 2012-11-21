@@ -33,7 +33,7 @@
 }
 .momail.button:hover:not(:active){
     background-image: -webkit-linear-gradient(#fff, #e8e8e8);
-    /* background-image:     -ms-linear-gradient(#fff, #e8e8e8);                   /* TODO:отладить градиенты в IE */
+    background-image:     -ms-linear-gradient(top,  #fff 0%,#e8e8e8 100%);
     background-image:      -o-linear-gradient(#fff, #e8e8e8);
     background-image:         linear-gradient(#fff, #e8e8e8);
 }
