@@ -20,7 +20,7 @@
     background-image:     -ms-linear-gradient(top, #f3f3f3 0%, #d8d8d8 100%);
     background-image:      -o-linear-gradient(#f3f3f3, #d8d8d8);
     background-image:         linear-gradient(#f3f3f3, #d8d8d8);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#f3f3f3', GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#d8d8d8', GradientType=0 );
     border: 1px solid #C2C2C2;
     border-radius: 0.4em/1em;
     cursor: pointer;
@@ -34,9 +34,10 @@
 }
 .momail.button:hover:not(:active){
     background-image: -webkit-linear-gradient(#fff, #e8e8e8);
-    background-image:     -ms-linear-gradient(top,  #fff 0%,#e8e8e8 100%);
+    background-image:     -ms-linear-gradient(top, #fff 0%, #e8e8e8 100%);
     background-image:      -o-linear-gradient(#fff, #e8e8e8);
     background-image:         linear-gradient(#fff, #e8e8e8);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#e8e8e8', GradientType=0 );
 }
 .momail.button:hover:active{
     box-shadow: 0 0 1px rgba(0,0,0,0.5) inset;
