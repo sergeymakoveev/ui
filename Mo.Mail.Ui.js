@@ -133,7 +133,7 @@
 
         this._init = function(args){
             This.get_('menu')
-                .mouseup(function(){this.blur();})
+                .mouseup(function(){this.blur();});
             This.get_('arrow')
                 .mousedown(function(e){ if($(e.target).is(':focus'))
                                            window.setTimeout(function(){ e.target.blur(); }, 0); });
