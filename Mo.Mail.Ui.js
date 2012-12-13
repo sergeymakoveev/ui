@@ -13,6 +13,10 @@
 
         Mo.Mail.Obj.Simple.apply(this, arguments);
 
+        this.tmpl = this.tmpl || '';
+        this.el   = this.el.size() ? this.el:
+                                     $(this.tmpl);
+
         var This=this, Super={};
 
         // Interface
@@ -181,6 +185,12 @@
      */
     Mo.Mail.Ui.ComboBox = function(Parent){
 
+        this.tmpl = '<div class="momail ui combobox button text" name="combobox">\
+                         <div name="button"></div>\
+                         <a name="arrow" tabindex="1"></a>\
+                         <a class="wrapper" tabindex="1"><span name="menu"></span></a>\
+                     </div>';
+
         Mo.Mail.Ui.Combo.apply(this, arguments);
 
         var This=this;
@@ -216,5 +226,8 @@
         this._init.apply(this, [].slice.call(arguments).slice(1));
 
     };
+
+    Mo.Mail.Ui.DropDown = function(Parent){};
+    Mo.Mail.Ui.ComboButton = function(Parent){};
 
 })(jQuery);
